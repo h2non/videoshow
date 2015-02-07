@@ -9,7 +9,7 @@ Still beta
 
 ## Requirements
 
-- **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libass --enable-libmp3lame --enable-libx264`
+- **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libass --enable-libmp3lame`
 
 ## Installation
 
@@ -48,7 +48,7 @@ videoshow(images, videoOptions)
 ## API
 
 
-#### videoshow([ images ], [ options ])
+### videoshow([ images ], [ options ])
 Return: `Videoshow`
 
 Videoshow constructor. You should pass an `array<string>` or `array<object>` or `array<ReadableStream>` with the desired images,
@@ -61,42 +61,42 @@ videoshow([ 'image1.jpg', 'image2.jpg', 'image'])
   .on('end', function () {})
 ```
 
-##### videoshow#audio(path)
+#### videoshow#audio(path)
 
 Define the audio file path to use. It supports multiple formats and codecs such as `acc`, `mp3` or `ogg`
 
-##### videoshow#subtitles(path)
+#### videoshow#subtitles(path)
 
 Define the [SubRip subtitles](http://en.wikipedia.org/wiki/SubRip#SubRip_text_file_format)
 file path to load. It should be a `.srt` file
 
-##### videoshow#save(path)
+#### videoshow#save(path)
 Return: `EventEmitter`
 
 Render and write the final video in the given path
 
-##### videoshow#filter(filter)
+#### videoshow#filter(filter)
 
 Add custom filter to the video
 
-##### videoshow#imageOptions(options)
+#### videoshow#imageOptions(options)
 
 Add specific image rendering options
 
-##### videoshow#options(options)
+#### videoshow#options(options)
 
 Add custom video rendering options
 
-##### videoshow#flag(argument)
+#### videoshow#flag(argument)
 
 Add a custom CLI flag to pass to `ffmpeg`
 
-#### videoshow.VERSION
+### videoshow.VERSION
 Type: `string`
 
 Current package semantic version
 
-#### videoshow.ffmpeg
+### videoshow.ffmpeg
 Type: `function`
 
 [fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg) API constructor
