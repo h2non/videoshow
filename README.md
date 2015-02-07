@@ -13,7 +13,7 @@ Still beta
 
 - **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libass --enable-libmp3lame`
 
-## Installation
+## Install
 
 ```bash
 npm install videoshow
@@ -48,7 +48,6 @@ videoshow(images, videoOptions)
 ```
 
 ## API
-
 
 ### videoshow([ images ], [ options ])
 Return: `Videoshow`
