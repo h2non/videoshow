@@ -1,0 +1,16 @@
+1
+00:00:00,394 --> 00:00:05,031
+<i>Hello World using
+<font color="#FE00FE">“subtitles”</font></i>
+
+2
+00:00:06,000 --> 00:00:09,099
+<i>Long slide step description testing: Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. </i>
+
+3
+00:00:10,000 --> 00:00:14,099
+<i>Step 3 description<b>"norris"</b></i>
+
+4
+00:00:15,000 --> 00:00:19,099
+<i>Step 4 description<b>"jackie"</b></i>
