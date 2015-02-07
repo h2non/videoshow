@@ -4,7 +4,7 @@
 
 Simple programmatic interface for node/io.js to create basic video slides from images using [ffmpeg](http://ffmpeg.org)
 
-With `videoshow` you to create videos form images with audio, subtitles and fade-in/out transitions.
+With `videoshow` you can easily create videos from images with audio, subtitles and fade-in/out transitions.
 Take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples) to see the supported features
 
 Still beta
@@ -54,7 +54,9 @@ videoshow(images, videoOptions)
 Return: `Videoshow`
 
 Videoshow constructor. You should pass an `array<string>` or `array<object>` or `array<ReadableStream>` with the desired images,
-and optionally passing the video render `options` object per each image
+and optionally passing the video render `options` object per each image.
+
+Image formats supported are: `jpg`, `png`, `gif`, `bmp`
 
 ```js
 videoshow([ 'image1.jpg', 'image2.jpg', 'image'])
