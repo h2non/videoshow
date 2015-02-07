@@ -1,11 +1,11 @@
-# videoshow [![Build Status](https://api.travis-ci.org/h2non/videoshow.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/videoshow.svg)][gemnasium] [![Code Climate](https://codeclimate.com/github/h2non/videoshow/badges/gpa.svg)](https://codeclimate.com/github/h2non/videoshow)  [![NPM](https://img.shields.io/npm/v/videoshow.svg)][npm]
+# videoshow [![Build Status](https://api.travis-ci.org/h2non/videoshow.svg?branch=master)][travis] [![Dependency Status](https://gemnasium.com/h2non/videoshow.svg)][gemnasium] [![Code Climate](https://codeclimate.com/github/h2non/videoshow/badges/gpa.svg)](https://codeclimate.com/github/h2non/videoshow) [![NPM](https://img.shields.io/npm/v/videoshow.svg)][npm]
 
 <img src="https://github.com/h2non/videoshow/blob/master/test/fixtures/norris.gif" width="180" align="right" />
 
 Simple programmatic interface for node/io.js to create basic video slides from images using [ffmpeg](http://ffmpeg.org)
 
 With `videoshow` you can easily create videos from images with audio, subtitles and fade-in/out transitions.
-Take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples) to see the supported features
+Take a look to [examples](https://github.com/h2non/videoshow/tree/master/examples) to see supported features
 
 Still beta
 
