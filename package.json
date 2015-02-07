@@ -31,7 +31,9 @@
     "slider",
     "transition",
     "photos",
-    "moviemaker"
+    "moviemaker",
+    "maker",
+    "movie"
   ],
   "dependencies": {
     "fluent-ffmpeg": "^2.0.0-rc3",
