@@ -49,7 +49,7 @@ videoshow(images, videoOptions)
 
 ## API
 
-### videoshow([ images ], [ options ])
+### videoshow(images, [ options ])
 Return: `Videoshow`
 
 Videoshow constructor. You should pass an `array<string>` or `array<object>` or `array<ReadableStream>` with the desired images,
