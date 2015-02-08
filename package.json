@@ -39,7 +39,7 @@
     "fluent-ffmpeg": "^2.0.0-rc3",
     "fw": "^0.1.2",
     "lil-uuid": "^0.1.0",
-    "lodash.merge": "^3.0.1"
+    "lodash.merge": "^3.0.0"
   },
   "devDependencies": {
     "chai": "^1.10.0",
