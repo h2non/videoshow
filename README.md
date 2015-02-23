@@ -2,9 +2,9 @@
 
 <img src="https://github.com/h2non/videoshow/blob/master/test/fixtures/norris.gif" width="180" align="right" />
 
-Simple programmatic interface for node/io.js to **create straightforward video slides based on images** using [ffmpeg](http://ffmpeg.org)
+Simple programmatic interface for node/io.js to **create straightforward slide show videos based from a series from images** using [ffmpeg](http://ffmpeg.org)
 
-You can easily **create videos** from **images** with optional **audio**, **subtitles** and **fade-in/out transitions**.
+You can easily **create videos** from **images** with optional **audio**, **subtitles** and **fade-in/out effects**. 
 Take a look to [examples](https://github.com/h2non/videoshow/tree/master/examples) to see some supported features
 
 Still beta
