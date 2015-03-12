@@ -50,6 +50,8 @@ videoshow(images, videoOptions)
   .save('video.mp4')
 ```
 
+Take a look to the [programmatic API](#api) for more details
+
 ## Command-line interface
 
 ```bash
