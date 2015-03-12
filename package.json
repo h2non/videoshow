@@ -1,7 +1,7 @@
 {
   "name": "videoshow",
   "version": "0.1.0",
-  "description": "Simple programmatic interface to create video slides from images",
+  "description": "Simple command-line and programmatic interface to create video slideshow from images",
   "repository": "h2non/videoshow",
   "author": "Tomas Aparicio",
   "license": "MIT",
@@ -32,7 +32,8 @@
     "photos",
     "moviemaker",
     "maker",
-    "movie"
+    "movie",
+    "slideshow"
   ],
   "dependencies": {
     "fluent-ffmpeg": "^2.0.0-rc3",
