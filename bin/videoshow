@@ -76,7 +76,7 @@ function options() {
 
 function error(msg) {
   if (argv.debug && msg.stack) {
-    console.error(msg.stack)
+    console.error(msg.stack || msg)
   } else {
     console.error(msg.message || msg)
   }
