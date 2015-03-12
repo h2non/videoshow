@@ -9,7 +9,7 @@ var images = [
 ]
 
 videoshow(images)
-  .save('test.mp4')
+  .save('video.mp4')
   .on('error', function (err) {
     console.error('Error:', err)
   })

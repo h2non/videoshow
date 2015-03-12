@@ -9,24 +9,26 @@ var options = {
 var images = [
   {
     path: __dirname + '/../test/fixtures/step_1.png',
-    caption: 'This is a sample text'
+    caption: 'This is a sample subtitle'
   }, {
     path: __dirname + '/../test/fixtures/step_2.png',
     caption: 'Another sample text'
   }, {
-    path: __dirname + '/../test/fixtures/step_3.png'
+    path: __dirname + '/../test/fixtures/step_3.png',
+    caption: 'Fast caption',
+    captionStart: 2,
+    captionEnd: 3
   }, {
-    path: __dirname + '/../test/fixtures/step_4.png',
-    transition: false
+    path: __dirname + '/../test/fixtures/step_4.png'
   }, {
     path: __dirname + '/../test/fixtures/step_5.png',
-    transition: false
+    caption: 'Bye bye'
   }
 ]
 
 videoshow(images, options)
   .audio(audio)
-  .save('audio.mp4')
+  .save('video.mp4')
   .on('error', function (err) {
     console.error('Error:', err)
   })

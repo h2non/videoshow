@@ -12,7 +12,7 @@ var images = [
 
 videoshow(images)
   .audio(audio)
-  .save('audio.mp4')
+  .save('video.mp4')
   .on('error', function (err) {
     console.error('Error:', err)
   })
