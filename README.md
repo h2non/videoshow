@@ -158,9 +158,9 @@ Default options are:
 
 - **path** `string` - File path to image
 - **loop** `number` - Image slide duration in **seconds**. Default to `5`
-- **caption** `string` - Caption text as subtitle. It allows a limited set of HTML tags. See [Subrip][subrip]
 - **transition** `boolean` - Enable fade in/out transition for the current image
 - **transitionDuration** `number` - Fade in/out transition duration in **seconds**. Default to `1`
+- **caption** `string` - Caption text as subtitle. It allows a limited set of HTML tags. See [Subrip][subrip]
 - **captionStart** `number` - Miliseconds to start the caption. Default to `1000`
 - **captionEnd** `number` - Miliseconds to remove the caption. Default to `loop - 1000`
 
