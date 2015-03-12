@@ -33,7 +33,8 @@
     "moviemaker",
     "maker",
     "movie",
-    "slideshow"
+    "slideshow",
+    "slideshows"
   ],
   "dependencies": {
     "fluent-ffmpeg": "^2.0.0-rc3",
