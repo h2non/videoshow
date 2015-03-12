@@ -7,7 +7,7 @@ suite('command-line', function () {
 
   function clean() {
     fs.unlinkSync(output)
-  })
+  }
 
   test('config', function (done) {
     var args = '--config test/fixtures/config.json --output ' + output
