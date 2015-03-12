@@ -2,16 +2,12 @@
   "name": "videoshow",
   "version": "0.1.0-beta.0",
   "description": "Simple programmatic interface to create video slides from images",
-  "engineStrict": true,
   "repository": "h2non/videoshow",
   "author": "Tomas Aparicio",
   "license": "MIT",
   "main": "lib",
   "directories": {
     "lib": "./lib"
-  },
-  "engines": {
-    "node": ">= 0.10.0"
   },
   "scripts": {
     "test": "make test"

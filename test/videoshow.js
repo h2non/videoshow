@@ -54,6 +54,26 @@ suite('videoshow', function () {
       })
   })
 
+  test('create video with custom captions per images', function (done) {
+    var imgs = images.map(function (path) {
+      return {
+        path: path,
+        caption: 'This is a sample subtitle text',
+        loop: 3
+      }
+    })
+
+    videoshow(imgs)
+      .audio(__dirname + '/fixtures/song.aac')
+      .subtitles(__dirname + '/fixtures/subtitles.srt')
+      .save(TMP + '/test6.mp4')
+      .on('error', done)
+      .on('end', function (output) {
+        expect(fs.existsSync(output)).to.be.true
+        done()
+      })
+  })
+
   test('create video with mp3 audio', function (done) {
     videoshow(images)
       .audio(__dirname + '/fixtures/song.mp3')

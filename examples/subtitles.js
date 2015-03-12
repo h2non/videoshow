@@ -12,8 +12,9 @@ var images = [
 ]
 
 videoshow(images)
-  .save('audio.mp4')
+  .subtitles(subtitles)
   .audio(audio)
+  .save('audio.mp4')
   .on('error', function (err) {
     console.error('Error:', err)
   })
