@@ -5,7 +5,8 @@
 Simple utility for **node/io.js** to **create straightforward slideshow videos based on images** using [ffmpeg](http://ffmpeg.org)
 
 You can easily **create videos** with optional **audio**, **subtitles** and **fade in/out transitions**.
-Take a look to [examples](https://github.com/h2non/videoshow/tree/master/examples), [programmatic API](#api) and [command-line](#command-line-interface) interface usage
+
+To getting started you can take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples), [programmatic API](#api) and [command-line](#command-line-interface) interface usage
 
 ## Requirements
 
