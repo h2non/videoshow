@@ -1,6 +1,6 @@
 {
   "name": "videoshow",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0",
   "description": "Simple programmatic interface to create video slides from images",
   "repository": "h2non/videoshow",
   "author": "Tomas Aparicio",
