@@ -37,6 +37,8 @@ var images = [
 var videoOptions = {
   fps: 25,
   loop: 5, // seconds
+  transition: true,
+  transitionDuration: 1, // seconds
   videoBitrate: 1024,
   videoCodec: 'libx264',
   size: '640x?',
@@ -163,6 +165,7 @@ Default options are:
 - **caption** `string` - Caption text as subtitle. It allows a limited set of HTML tags. See [Subrip][subrip]
 - **captionStart** `number` - Miliseconds to start the caption. Default to `1000`
 - **captionEnd** `number` - Miliseconds to remove the caption. Default to `loop - 1000`
+- **logo** `string` - Path to logo image. See `logo()` method
 
 #### videoshow#image(image)
 
@@ -171,7 +174,20 @@ or a plain `object` with [image options](#supported-image-options)
 
 #### videoshow#audio(path)
 
-Define the audio file path to use. It supports multiple formats and codecs such as `acc`, `mp3` or `ogg`
+Define the audio file path to use.
+It supports multiple formats and codecs such as `acc`, `mp3` or `ogg`
+
+#### videoshow#logo(path [, params ])
+
+Add a custom image as logo in the left-upper corner.
+It must be a `png` or `jpeg` image
+
+Supported params:
+
+- **start** `number` - Video second to show the logo. Default `5` seconds
+- **end** `number` - Video second to remove  the logo. Default `totalLength - 5` seconds
+- **xAxis** `number` - Logo `x` axis position. Default `10`
+- **yAxis** `number` - Logo `y` axis position. Default `10`
 
 #### videoshow#subtitles(path)
 
@@ -195,19 +211,36 @@ Render and write the final video in the given path
 
 #### videoshow#input(input)
 
-Add input file to video
+Add input file to video. By default you don't need to call this method
 
 #### videoshow#filter(filter)
 
-Add custom filter to the video
+Add a custom video filter to the video. See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#videofiltersfilter-add-custom-video-filters)
 
-#### videoshow#imageOptions(options)
+#### videoshow#complexFilter(filter)
 
-Add specific image rendering options
+Add a custom complex filter to the video. See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#complexfilterfilters-map-set-complex-filtergraph)
+
+#### videoshow#loop(seconds)
+
+Default image loop time in seconds. Default to `5`
+
+#### videoshow#size(resolution)
+
+Video size resolution. Default to `640x?`.
+See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#sizesize-set-output-frame-size)
+
+#### videoshow#aspect(aspect)
+
+Video aspect ration. Default autocalculated from video `size` param.
+See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#aspectaspect-set-output-frame-aspect-ratio)
 
 #### videoshow#options(options)
+Alias: `flags`
 
-Add custom video rendering options
+Add a set of video output options as command-line flag.
+`options` argument should be an array.
+See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#outputoptionsoption-add-custom-output-options)
 
 #### videoshow#option(argument)
 Alias: `flag`
