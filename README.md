@@ -209,9 +209,16 @@ Add specific image rendering options
 
 Add custom video rendering options
 
-#### videoshow#flag(argument)
+#### videoshow#option(argument)
+Alias: `flag`
 
-Add a custom CLI flag to pass to `ffmpeg`
+Add a custom output option as command-line flag to pass to `ffmpeg`
+
+#### videoshow#options(arguments)
+Alias: `flags`
+
+Add multiple output options as command-line flags to pass to `ffmpeg`.
+The argument must be an `array`
 
 ### videoshow.VERSION
 Type: `string`
