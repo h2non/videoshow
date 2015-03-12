@@ -64,7 +64,7 @@ videoshow([ 'image1.jpg', 'image2.jpg', 'image3.jpg'])
   .on('end', function () {})
 ```
 
-Images could be a collection as well:
+`images` param could be a collection as well:
 ```js
 videoshow([{
     path: 'image1.jpg',
