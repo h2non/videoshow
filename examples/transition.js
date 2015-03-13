@@ -8,13 +8,16 @@ var options = {
 
 var images = [
   {
-    path: __dirname + '/../test/fixtures/step_1.png'
-    loop: 2,
+    path: __dirname + '/../test/fixtures/step_1.png',
+    disableFadeOut: true,
+    loop: 2
   }, {
     path: __dirname + '/../test/fixtures/step_2.png',
-    loop: 5,
+    disableFadeIn: true,
+    loop: 5
   }, {
-    path: __dirname + '/../test/fixtures/step_3.png'
+    path: __dirname + '/../test/fixtures/step_3.png',
+    transitionColor: 'pink'
   }, {
     path: __dirname + '/../test/fixtures/step_4.png',
     transition: false
@@ -27,6 +30,9 @@ var images = [
 videoshow(images, options)
   .audio(audio)
   .save('video.mp4')
+  .on('start', function (command) {
+    console.log('ffmpeg process started:', command)
+  })
   .on('error', function (err) {
     console.error('Error:', err)
   })

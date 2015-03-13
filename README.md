@@ -8,7 +8,7 @@ You can easily **create videos** with optional **audio**, **subtitles** and **fa
 
 To getting started you can take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples), [programmatic API](#api) and [command-line](#command-line-interface) interface usage
 
-[Here](https://www.youtube.com/watch?v=hob1kxPNXg0) you can see a demo video created using videoshow
+[Here](https://www.youtube.com/watch?v=hob1kxPNXg0) you can see a real video created using videoshow
 
 ## Requirements
 
@@ -53,6 +53,16 @@ var videoOptions = {
 videoshow(images, videoOptions)
   .audio('song.mp3')
   .save('video.mp4')
+  .on('start', function (command) {
+    console.log('ffmpeg process started:', command)
+  })
+  .on('error', function (err, stdout, stderr) {
+    console.error('Error:', err)
+    console.error('ffmpeg stderr:', stderr)
+  })
+  .on('end', function (output) {
+    console.error('Video created in:', output)
+  })
 ```
 
 Take a look to the [programmatic API](#api) for more details
@@ -68,16 +78,20 @@ Create video slides easily from images
 Usage: bin/videoshow [options]
 
 Options:
-  --help, -h    Show help
-  --config, -c  File path to JSON config file [required]
-  --audio, -a   Optional audio file path
-  --input, -i   Add additional input to video
-  --output, -o  Output video file path
-  --debug, -d   Enable debug mode in error case
+  --help, -h       Show help
+  --config, -c     File path to JSON config file [required]
+  --audio, -a      Optional audio file path
+  --subtitles, -s  Path to .srt subtitles file
+  --input, -i      Add additional input to video
+  --output, -o     Output video file path
+  --size, -x       Video size resolution
+  --logo, -l       Path to logo image
+  --debug, -d      Enable debug mode in error case
 
 Examples:
-  bin/videoshow -c config.json --audio song.mp3
+  bin/videoshow -c config.json video.mp4
   bin/videoshow -c config.json --audio song.mp3 video.mp4
+  bin/videoshow -c config.json --audio song.mp3 --logo logo.png video.mp4
 ```
 
 Example `config.json` file:
@@ -164,7 +178,10 @@ Default options are:
 - **path** `string` - File path to image
 - **loop** `number` - Image slide duration in **seconds**. Default to `5`
 - **transition** `boolean` - Enable fade in/out transition for the current image
-- **transitionDuration** `number` - Fade in/out transition duration in **seconds**. Default to `1`
+- **transitionDuration** `number` - Fade in/out transition duration in **seconds**. Default to `0.5`
+- **transitionColor** `string` - Fade in/out transition background color. Default to `black`. See [supported colors][ffmpeg-colors]
+- **disableFadeOut** `boolean` - If transition is enable, disable the fade out. Default `false`
+- **disableFadeIn** `boolean` - If transition is enable, disable the fade in. Default `false`
 - **caption** `string` - Caption text as subtitle. It allows a limited set of HTML tags. See [Subrip][subrip]
 - **captionStart** `number` - Miliseconds to start the caption. Default to `1000`
 - **captionEnd** `number` - Miliseconds to remove the caption. Default to `loop - 1000`
@@ -175,17 +192,22 @@ Default options are:
 Push an image to the video. You can pass an `string` as path to the image,
 or a plain `object` with [image options](#supported-image-options)
 
-#### videoshow#audio(path)
+#### videoshow#audio(path [, params ])
 
 Define the audio file path to use.
 It supports multiple formats and codecs such as `acc`, `mp3` or `ogg`
+
+**Supported params**:
+
+- **delay** `number` - Delay audio start in seconds. Default to `0` seconds
+- **fade** `boolean` - Enable audio fade in/out effect. Default `true`
 
 #### videoshow#logo(path [, params ])
 
 Add a custom image as logo in the left-upper corner.
 It must be a `png` or `jpeg` image
 
-Supported params:
+**Supported params**:
 
 - **start** `number` - Video second to show the logo. Default `5` seconds
 - **end** `number` - Video second to remove  the logo. Default `totalLength - 5` seconds
@@ -285,3 +307,4 @@ Type: `function`
 [npm]: http://npmjs.org/package/videoshow
 [subrip]: http://en.wikipedia.org/wiki/SubRip#SubRip_text_file_format
 [ffmpeg-api]: https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#creating-an-ffmpeg-command
+[ffmpeg-colors]: https://www.ffmpeg.org/ffmpeg-utils.html#Color

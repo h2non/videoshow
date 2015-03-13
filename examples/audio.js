@@ -2,6 +2,11 @@ var videoshow = require('../')
 
 var audio = __dirname + '/../test/fixtures/song.mp3'
 
+var audioParams = {
+  fade: true,
+  delay: 2 // seconds
+}
+
 var images = [
   __dirname + '/../test/fixtures/step_1.png',
   __dirname + '/../test/fixtures/step_2.png',
@@ -11,8 +16,11 @@ var images = [
 ]
 
 videoshow(images)
-  .audio(audio)
+  .audio(audio, audioParams)
   .save('video.mp4')
+  .on('start', function (command) {
+    console.log('ffmpeg process started:', command)
+  })
   .on('error', function (err) {
     console.error('Error:', err)
   })

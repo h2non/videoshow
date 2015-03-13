@@ -7,7 +7,7 @@ var version = require('../package.json').version
 var yargs = require('yargs')
 var argv = yargs
   .usage('Create video slides easily from images with audio, subtitles and transitions\nUsage: $0 [options]')
-  .example('$0 -c config.json --audio song.mp3', '')
+  .example('$0 -c config.json video.mp4', '')
   .help('help').alias('help', 'h')
   .version(version)
   .alias('v', 'version')
@@ -21,6 +21,10 @@ var argv = yargs
       alias: 'a',
       description: 'Optional audio file path'
     },
+    subtitles: {
+      alias: 's',
+      description: 'Path to .srt subtitles file'
+    },
     input: {
       alias: 'i',
       description: 'Add additional input to video'
@@ -28,6 +32,14 @@ var argv = yargs
     output: {
       alias: 'o',
       description: 'Output video file path'
+    },
+    size: {
+      alias: 'x',
+      description: 'Video size resolution'
+    },
+    logo: {
+      alias: 'l',
+      description: 'Path to logo image'
     },
     debug: {
       alias: 'd',
@@ -43,13 +55,22 @@ try {
 }
 
 function render(opts) {
-  var output = opts.output || argv.output || getOutput()
-  var audio = opts.audio || argv.audio
+  var output = argv.output || opts.output || getOutput()
+  var audio = argv.audio || opts.audio
+  var subtitles = argv.subtitles || opts.subtitles
+  var size = argv.size || opts.size
+  var logo = argv.logo || opts.logo
+  var loop = argv.loop || opts.loop
 
   var video = videoshow(opts.images, opts.params)
-  if (audio) video.audio(audio)
 
-  video
+  if (audio) video.audio(audio)
+  if (subtitles) video.subtitles(subtitles)
+  if (size) video.size(size)
+  if (logo) video.logo(logo)
+  if (loop) video.loop(loop)
+
+   video
     .save(output)
     .on('error', error)
     .on('end', function () {
