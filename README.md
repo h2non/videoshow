@@ -225,7 +225,6 @@ you should pass it as video input:
 ```js
 videoshow(images)
   .input('subtitles.ass')
-  .on('end', end)
   .save('video.mp4')
 ```
 
