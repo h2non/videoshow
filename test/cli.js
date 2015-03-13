@@ -34,4 +34,45 @@ suite('command-line', function () {
       done()
     })
   })
+
+  test('logo', function (done) {
+    var args = '--config test/fixtures/config.json --logo test/fixtures/logo.png ' + output
+
+    exec('bin/videoshow ' + args,
+    function (error, stdout, stderr) {
+      expect(stdout).to.match(/video/i)
+      expect(stderr).to.be.empty
+      expect(fs.existsSync(output)).to.be.true
+      clean()
+      done()
+    })
+  })
+
+  test('size', function (done) {
+    var args = '--config test/fixtures/config.json --size 320x? ' + output
+
+    exec('bin/videoshow ' + args,
+    function (error, stdout, stderr) {
+      expect(stdout).to.match(/video/i)
+      expect(stderr).to.be.empty
+      expect(fs.existsSync(output)).to.be.true
+      clean()
+      done()
+    })
+  })
+
+  test('debug', function (done) {
+    var args = '--config test/fixtures/config.json --debug ' + output
+
+    exec('bin/videoshow ' + args,
+    function (error, stdout, stderr) {
+      expect(stdout).to.match(/video/i)
+      expect(stdout).to.match(/ffmpeg/i)
+      expect(stdout).to.match(/started/i)
+      expect(stderr).to.be.empty
+      expect(fs.existsSync(output)).to.be.true
+      clean()
+      done()
+    })
+  })
 })

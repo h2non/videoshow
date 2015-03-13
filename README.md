@@ -178,7 +178,7 @@ Default options are:
 - **path** `string` - File path to image
 - **loop** `number` - Image slide duration in **seconds**. Default to `5`
 - **transition** `boolean` - Enable fade in/out transition for the current image
-- **transitionDuration** `number` - Fade in/out transition duration in **seconds**. Default to `0.5`
+- **transitionDuration** `number` - Fade in/out transition duration in **seconds**. Default to `1`
 - **transitionColor** `string` - Fade in/out transition background color. Default to `black`. See [supported colors][ffmpeg-colors]
 - **disableFadeOut** `boolean` - If transition is enable, disable the fade out. Default `false`
 - **disableFadeIn** `boolean` - If transition is enable, disable the fade in. Default `false`

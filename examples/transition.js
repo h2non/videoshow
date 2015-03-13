@@ -17,10 +17,11 @@ var images = [
     loop: 5
   }, {
     path: __dirname + '/../test/fixtures/step_3.png',
-    transitionColor: 'pink'
+    transitionColor: '0xFF66C7'
   }, {
     path: __dirname + '/../test/fixtures/step_4.png',
-    transition: false
+    transition: false,
+    transitionColor: 'red'
   }, {
     path: __dirname + '/../test/fixtures/step_5.png',
     transition: false

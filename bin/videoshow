@@ -73,6 +73,11 @@ function render(opts) {
    video
     .save(output)
     .on('error', error)
+    .on('start', function (command) {
+      if (argv.debug) {
+        echo('ffmpeg process started:'. command)
+      }
+    })
     .on('end', function () {
       echo('Video created:', output)
     })
