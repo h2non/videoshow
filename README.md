@@ -6,7 +6,7 @@ Simple utility for **node/io.js** to **create straightforward video slideshows b
 
 You can easily **create videos** with optional **audio**, **subtitles** and **fade in/out transitions**.
 
-To getting started you can take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples), [programmatic API](#api) and [command-line](#command-line-interface) interface usage
+To getting started you can take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples), [programmatic API](#api) and [command-line](#command-line-interface) interface
 
 [Here](https://www.youtube.com/watch?v=ZU84JxWGRhk) you can see a real video created using videoshow
 
