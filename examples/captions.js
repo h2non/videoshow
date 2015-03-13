@@ -12,14 +12,16 @@ var images = [
     caption: 'This is a sample subtitle'
   }, {
     path: __dirname + '/../test/fixtures/step_2.png',
-    caption: 'Another sample text'
+    caption: 'Another sample text',
+    loop: 5
   }, {
     path: __dirname + '/../test/fixtures/step_3.png',
     caption: 'Fast caption',
     captionStart: 2,
     captionEnd: 3
   }, {
-    path: __dirname + '/../test/fixtures/step_4.png'
+    path: __dirname + '/../test/fixtures/step_4.png',
+    loop: 3
   }, {
     path: __dirname + '/../test/fixtures/step_5.png',
     caption: 'Bye bye'

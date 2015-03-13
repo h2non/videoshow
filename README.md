@@ -208,7 +208,17 @@ videoshow(images)
 #### videoshow#save(path)
 Return: `EventEmitter` Alias: `render`
 
-Render and write the final video in the given path
+Render and write in disk the resultant video in the given path
+
+Supported events for subscription:
+
+- **start** `cmd` - Fired when ffmpeg process started
+- **error** `error` - Fired when transcoding error success
+- **progress** `data` - Fired with transcoding progress information
+- **codecData** `codec` - Fired when input codec data is available
+- **end** `videoPath` - Fired when the process finish successfully
+
+For more information, see the [ffmpeg docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#setting-event-handlers)
 
 #### videoshow#input(input)
 

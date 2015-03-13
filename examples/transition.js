@@ -9,8 +9,10 @@ var options = {
 var images = [
   {
     path: __dirname + '/../test/fixtures/step_1.png'
+    loop: 2,
   }, {
-    path: __dirname + '/../test/fixtures/step_2.png'
+    path: __dirname + '/../test/fixtures/step_2.png',
+    loop: 5,
   }, {
     path: __dirname + '/../test/fixtures/step_3.png'
   }, {
