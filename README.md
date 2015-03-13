@@ -8,6 +8,8 @@ You can easily **create videos** with optional **audio**, **subtitles** and **fa
 
 To getting started you can take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples), [programmatic API](#api) and [command-line](#command-line-interface) interface usage
 
+[Here]((https://www.youtube.com/watch?v=hob1kxPNXg0)) you can see a demo video created using videoshow
+
 ## Requirements
 
 - **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libass --enable-libmp3lame`
