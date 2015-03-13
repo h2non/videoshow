@@ -236,7 +236,7 @@ Render and write in disk the resultant video in the given path
 Supported events for subscription:
 
 - **start** `cmd` - Fired when ffmpeg process started
-- **error** `error` - Fired when transcoding error success
+- **error** `error, stdout, stderr` - Fired when transcoding error happens
 - **progress** `data` - Fired with transcoding progress information
 - **codecData** `codec` - Fired when input codec data is available
 - **end** `videoPath` - Fired when the process finish successfully

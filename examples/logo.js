@@ -3,6 +3,12 @@ var videoshow = require('../')
 var subtitles = __dirname + '/../test/fixtures/subtitles.srt'
 var audio = __dirname + '/../test/fixtures/song.mp3'
 var logo = __dirname + '/../test/fixtures/logo.png'
+var logoParams = {
+  start: 5,
+  end: 20,
+  xAxis: 20,
+  yAxis: 20
+}
 
 var images = [
   __dirname + '/../test/fixtures/step_1.png',

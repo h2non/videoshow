@@ -43,7 +43,8 @@ var argv = yargs
     },
     debug: {
       alias: 'd',
-      description: 'Enable debug mode in error case'
+      description: 'Enable debug mode in error case',
+      type: 'boolean'
     }
   })
   .argv
@@ -75,7 +76,7 @@ function render(opts) {
     .on('error', error)
     .on('start', function (command) {
       if (argv.debug) {
-        echo('ffmpeg process started:'. command)
+        echo('ffmpeg process started:', command)
       }
     })
     .on('end', function () {

@@ -68,7 +68,6 @@ suite('command-line', function () {
     function (error, stdout, stderr) {
       expect(stdout).to.match(/video/i)
       expect(stdout).to.match(/ffmpeg/i)
-      expect(stdout).to.match(/started/i)
       expect(stderr).to.be.empty
       expect(fs.existsSync(output)).to.be.true
       clean()
