@@ -1,6 +1,6 @@
 {
   "name": "videoshow",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Simple command-line and programmatic interface to create videos slideshows from images using ffmpeg",
   "repository": "h2non/videoshow",
   "author": "Tomas Aparicio",
