@@ -74,7 +74,7 @@ $ videoshow --help
 ```
 
 ```bash
-Create video slides easily from images
+Create video slideshow easily from images
 Usage: bin/videoshow [options]
 
 Options:
