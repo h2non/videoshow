@@ -164,6 +164,7 @@ Default options are:
   loop: 5, // seconds
   transition: true,
   transitionDuration: 1,
+  captionDelay: 1000,
   useSubRipSubtitles: false,
   subtitleStyle: null,
   videoBitrate: 1024,
@@ -177,6 +178,7 @@ Default options are:
 
 Options details:
 
+- **captionDelay** `number` - Miliseconds to delay the show/hide of the caption. Default to `1000`
 - **useSubRipSubtitles** `boolean` - Use SubRip subtitles format. It uses by default [SSA/ASS](http://en.wikipedia.org/wiki/SubStation_Alpha). Default `false`
 - **subtitleStyle** `object` - SSA/ASS subtitles style. See [substation.js](https://github.com/h2non/videoshow/blob/master/lib/substation.js#L49) and [fixture file](https://github.com/h2non/videoshow/blob/master/test/fixtures/subtitles.ass) for allowed params
 
