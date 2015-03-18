@@ -182,7 +182,7 @@ Default options are:
 - **transitionColor** `string` - Fade in/out transition background color. Default to `black`. See [supported colors][ffmpeg-colors]
 - **disableFadeOut** `boolean` - If transition is enable, disable the fade out. Default `false`
 - **disableFadeIn** `boolean` - If transition is enable, disable the fade in. Default `false`
-- **caption** `string` - Caption text as subtitle. It allows a limited set of HTML tags. See [Subrip][subrip]
+- **caption** `string` - Caption text as subtitle. It allows a limited set of HTML tags if tou use [Subrip][subrip] format
 - **captionStart** `number` - Miliseconds to start the caption. Default to `1000`
 - **captionEnd** `number` - Miliseconds to remove the caption. Default to `loop - 1000`
 - **logo** `string` - Path to logo image. See `logo()` method
