@@ -3,7 +3,13 @@ var videoshow = require('../')
 var audio = __dirname + '/../test/fixtures/song.mp3'
 
 var options = {
-  transition: true
+  transition: true,
+  useSubRipSubtitles: false,
+  subtitleStyle: {
+    Fontname: 'Verdana',
+    Fontsize: '24',
+    PrimaryColour: '11861244'
+  }
 }
 
 var images = [
@@ -31,6 +37,9 @@ var images = [
 videoshow(images, options)
   .audio(audio)
   .save('video.mp4')
+  .on('start', function (command) {
+    console.log('ffmpeg process started:', command)
+  })
   .on('error', function (err) {
     console.error('Error:', err)
   })

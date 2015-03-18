@@ -37,6 +37,7 @@
     "slideshows"
   ],
   "dependencies": {
+    "ass-stringify": "^0.1.3",
     "fluent-ffmpeg": "^2.0.0-rc3",
     "fw": "^0.1.2",
     "lil-uuid": "^0.1.0",

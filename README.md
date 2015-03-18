@@ -186,6 +186,8 @@ Default options are:
 - **captionStart** `number` - Miliseconds to start the caption. Default to `1000`
 - **captionEnd** `number` - Miliseconds to remove the caption. Default to `loop - 1000`
 - **logo** `string` - Path to logo image. See `logo()` method
+- **useSubRipSubtitles** `boolean` - Use SubRip subtitles format. It uses by default [SSA/ASS](http://en.wikipedia.org/wiki/SubStation_Alpha). Default `false`
+- **subtitlesStyle** `object` - SSA/ASS subtitles style. See [substation.js](https://github.com/h2non/videoshow/blob/master/lib/substation.js) and [fixture file](https://github.com/h2non/videoshow/blob/master/test/fixtures/subtitles.ass) for examples
 
 #### videoshow#image(image)
 
@@ -204,7 +206,7 @@ It supports multiple formats and codecs such as `acc`, `mp3` or `ogg`
 
 #### videoshow#logo(path [, params ])
 
-Add a custom image as logo in the left-upper corner.
+Add a custom image as logo in the left-upper corner by default. You can customize the position by `x/y` axis
 It must be a `png` or `jpeg` image
 
 **Supported params**:
@@ -216,17 +218,10 @@ It must be a `png` or `jpeg` image
 
 #### videoshow#subtitles(path)
 
-Define the [SubRip subtitles][subrip]
-file path to load. It should be a `.srt` file
+Define the [SubRip subtitles][subrip] or [SubStation Alpha](http://en.wikipedia.org/wiki/SubStation_Alpha) (SSA/ASS)
+file path to load. It should be a `.str` or `.ass` file respectively
 
-If you want to use [SubStation Alpha](http://en.wikipedia.org/wiki/SubStation_Alpha) (SSA/ASS) subtitles,
-you should pass it as video input:
-
-```js
-videoshow(images)
-  .input('subtitles.ass')
-  .save('video.mp4')
-```
+See [fixtures](https://github.com/h2non/videoshow/blob/master/test/fixtures/subtitles.srt) for examples
 
 #### videoshow#save(path)
 Return: `EventEmitter` Alias: `render`

@@ -1,6 +1,7 @@
 var videoshow = require('../')
 
-var subtitles = __dirname + '/../test/fixtures/subtitles.srt'
+var subtitles = __dirname + '/../test/fixtures/subtitles.ass'
+//var subtitles = __dirname + '/../test/fixtures/subtitles.srt'
 var audio = __dirname + '/../test/fixtures/song.mp3'
 
 var images = [
