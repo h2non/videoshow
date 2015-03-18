@@ -164,6 +164,8 @@ Default options are:
   loop: 5, // seconds
   transition: true,
   transitionDuration: 1,
+  useSubRipSubtitles: false,
+  subtitleStyle: null,
   videoBitrate: 1024,
   videoCodec: 'libx264',
   size: '640x?',
@@ -172,6 +174,11 @@ Default options are:
   format: 'mp4'
 }
 ```
+
+Options details:
+
+- **useSubRipSubtitles** `boolean` - Use SubRip subtitles format. It uses by default [SSA/ASS](http://en.wikipedia.org/wiki/SubStation_Alpha). Default `false`
+- **subtitleStyle** `object` - SSA/ASS subtitles style. See [substation.js](https://github.com/h2non/videoshow/blob/master/lib/substation.js#L49) and [fixture file](https://github.com/h2non/videoshow/blob/master/test/fixtures/subtitles.ass) for allowed params
 
 #### Image options
 
@@ -183,11 +190,10 @@ Default options are:
 - **disableFadeOut** `boolean` - If transition is enable, disable the fade out. Default `false`
 - **disableFadeIn** `boolean` - If transition is enable, disable the fade in. Default `false`
 - **caption** `string` - Caption text as subtitle. It allows a limited set of HTML tags. See [Subrip][subrip]
+- **captionDelay** `number` - Miliseconds to delay the show/hide of the caption. Default to `1000`
 - **captionStart** `number` - Miliseconds to start the caption. Default to `1000`
 - **captionEnd** `number` - Miliseconds to remove the caption. Default to `loop - 1000`
 - **logo** `string` - Path to logo image. See `logo()` method
-- **useSubRipSubtitles** `boolean` - Use SubRip subtitles format. It uses by default [SSA/ASS](http://en.wikipedia.org/wiki/SubStation_Alpha). Default `false`
-- **subtitleStyle** `object` - SSA/ASS subtitles style. See [substation.js](https://github.com/h2non/videoshow/blob/master/lib/substation.js#L49) and [fixture file](https://github.com/h2non/videoshow/blob/master/test/fixtures/subtitles.ass) for allowed params
 
 #### videoshow#image(image)
 
