@@ -6,7 +6,7 @@ var version = require('../package.json').version
 
 var yargs = require('yargs')
 var argv = yargs
-  .usage('Create video slides easily from images with audio, subtitles and transitions\nUsage: $0 [options]')
+  .usage('Create video slideshows easily from images with audio, subtitles and transitions\nUsage: $0 [options]')
   .example('$0 -c config.json video.mp4', '')
   .help('help').alias('help', 'h')
   .version(version)
