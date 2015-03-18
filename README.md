@@ -187,7 +187,7 @@ Default options are:
 - **captionEnd** `number` - Miliseconds to remove the caption. Default to `loop - 1000`
 - **logo** `string` - Path to logo image. See `logo()` method
 - **useSubRipSubtitles** `boolean` - Use SubRip subtitles format. It uses by default [SSA/ASS](http://en.wikipedia.org/wiki/SubStation_Alpha). Default `false`
-- **subtitlesStyle** `object` - SSA/ASS subtitles style. See [substation.js](https://github.com/h2non/videoshow/blob/master/lib/substation.js) and [fixture file](https://github.com/h2non/videoshow/blob/master/test/fixtures/subtitles.ass) for examples
+- **subtitleStyle** `object` - SSA/ASS subtitles style. See [substation.js](https://github.com/h2non/videoshow/blob/master/lib/substation.js#L49) and [fixture file](https://github.com/h2non/videoshow/blob/master/test/fixtures/subtitles.ass) for allowed params
 
 #### videoshow#image(image)
 
