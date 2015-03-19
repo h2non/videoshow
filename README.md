@@ -155,7 +155,7 @@ videoshow([{
 
 #### Video options
 
-You can define any of the methods allowed by [fluent-ffmpeg][ffmpeg-api]
+You can define as option any method name allowed by [fluent-ffmpeg][ffmpeg-api]
 
 Default options are:
 ```js
@@ -189,6 +189,7 @@ Options details:
 - **transition** `boolean` - Enable fade in/out transition for the current image
 - **transitionDuration** `number` - Fade in/out transition duration in **seconds**. Default to `1`
 - **transitionColor** `string` - Fade in/out transition background color. Default to `black`. See [supported colors][ffmpeg-colors]
+- **filters** `array<string|object>` - Add custom ffmpeg video filters to the image slide. 
 - **disableFadeOut** `boolean` - If transition is enable, disable the fade out. Default `false`
 - **disableFadeIn** `boolean` - If transition is enable, disable the fade in. Default `false`
 - **caption** `string` - Caption text as subtitle. It allows a limited set of HTML tags. See [Subrip][subrip]
@@ -214,7 +215,7 @@ It supports multiple formats and codecs such as `acc`, `mp3` or `ogg`
 
 #### videoshow#logo(path [, params ])
 
-Add a custom image as logo in the left-upper corner by default. You can customize the position by `x/y` axis
+Add a custom image as logo in the left-upper corner by default. You can customize the position by `x/y` axis.
 It must be a `png` or `jpeg` image
 
 **Supported params**:
