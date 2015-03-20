@@ -34,7 +34,8 @@
     "maker",
     "movie",
     "slideshow",
-    "slideshows"
+    "slideshows",
+    "animoto"
   ],
   "dependencies": {
     "ass-stringify": "^0.1.1",
