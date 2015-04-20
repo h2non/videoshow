@@ -8,7 +8,8 @@ You can easily **create videos** with optional **audio**, **subtitles** and **fa
 
 To getting started you can take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples), [programmatic API](#api) and [command-line](#command-line-interface) interface
 
-[Here](https://www.youtube.com/watch?v=ZU84JxWGRhk) you can see a real video created using videoshow
+videoshow was used in production rendering thousands of videos.
+[Here](https://www.youtube.com/watch?v=ZU84JxWGRhk) you can see a real video created using videoshow.
 
 ## Requirements
 
@@ -109,7 +110,24 @@ Example `config.json` file:
     "size": "640x?",
     "audioBitrate": "128k",
     "audioChannels": 2,
-    "format": "mp4"
+    "format": "mp4",
+    "subtitleStyles": {
+      "Fontname": "Verdana",
+      "Fontsize": "26",
+      "PrimaryColour": "11861244",
+      "SecondaryColour": "11861244",
+      "TertiaryColour": "11861244",
+      "BackColour": "-2147483640",
+      "Bold": "2",
+      "Italic": "0",
+      "BorderStyle": "2",
+      "Outline": "2",
+      "Shadow": "3",
+      "Alignment": "1",
+      "MarginL": "40",
+      "MarginR": "60",
+      "MarginV": "40"
+    }
   },
   "images": [
     "./test/fixtures/step_1.png",
@@ -189,7 +207,7 @@ Options details:
 - **transition** `boolean` - Enable fade in/out transition for the current image
 - **transitionDuration** `number` - Fade in/out transition duration in **seconds**. Default to `1`
 - **transitionColor** `string` - Fade in/out transition background color. Default to `black`. See [supported colors][ffmpeg-colors]
-- **filters** `array<string|object>` - Add custom ffmpeg video filters to the image slide. 
+- **filters** `array<string|object>` - Add custom ffmpeg video filters to the image slide.
 - **disableFadeOut** `boolean` - If transition is enable, disable the fade out. Default `false`
 - **disableFadeIn** `boolean` - If transition is enable, disable the fade in. Default `false`
 - **caption** `string` - Caption text as subtitle. It allows a limited set of HTML tags. See [Subrip][subrip]

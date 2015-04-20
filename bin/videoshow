@@ -63,7 +63,7 @@ function render(opts) {
   var logo = argv.logo || opts.logo
   var loop = argv.loop || opts.loop
 
-  var video = videoshow(opts.images, opts.params)
+  var video = videoshow(opts.images, opts.options)
 
   if (audio) video.audio(audio)
   if (subtitles) video.subtitles(subtitles)
@@ -71,7 +71,7 @@ function render(opts) {
   if (logo) video.logo(logo)
   if (loop) video.loop(loop)
 
-   video
+  video
     .save(output)
     .on('error', error)
     .on('start', function (command) {
@@ -95,7 +95,7 @@ function getOutput() {
 function options() {
   var opts = {}
   var config = JSON.parse(fs.readFileSync(argv.config))
-  if (config && config.options) {
+  if (config && (config.options || config.images)) {
     opts = config
   }
   return opts

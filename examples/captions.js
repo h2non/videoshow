@@ -3,12 +3,26 @@ var videoshow = require('../')
 var audio = __dirname + '/../test/fixtures/song.mp3'
 
 var options = {
+  loop: 5,
+  captionDelay: 350,
   transition: true,
-  useSubRipSubtitles: false,
+  useSubRipSubtitles: true,
   subtitleStyle: {
     Fontname: 'Verdana',
-    Fontsize: '24',
-    PrimaryColour: '11861244'
+    Fontsize: '26',
+    PrimaryColour: '11861244',
+    SecondaryColour: '11861244',
+    TertiaryColour: '11861244',
+    BackColour: '-2147483640',
+    Bold: '2',
+    Italic: '0',
+    BorderStyle: '2',
+    Outline: '2',
+    Shadow: '3',
+    Alignment: '1', // left, middle, right
+    MarginL: '40',
+    MarginR: '60',
+    MarginV: '40'
   }
 }
 
