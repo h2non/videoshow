@@ -8,8 +8,7 @@ You can easily **create videos** with optional **audio**, **subtitles** and **fa
 
 To getting started you can take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples), [programmatic API](#api) and [command-line](#command-line-interface) interface
 
-videoshow was used in production rendering thousands of videos.
-[Here](https://www.youtube.com/watch?v=ZU84JxWGRhk) you can see a real video created using videoshow.
+videoshow is used in production rendering thousands of videos per month. [Here](https://www.youtube.com/watch?v=ZU84JxWGRhk) you can see a real example.
 
 ## Requirements
 
