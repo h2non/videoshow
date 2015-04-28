@@ -14,6 +14,8 @@ videoshow is used in production rendering thousands of videos per month. [Here](
 
 - **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libass --enable-libmp3lame`
 
+You can download static builds of ffmpeg from [here](http://johnvansickle.com/ffmpeg/)
+
 ## Install
 
 ```bash
