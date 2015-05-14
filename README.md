@@ -12,7 +12,9 @@ videoshow is used in production rendering thousands of videos per month. [Here](
 
 - **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libass --enable-libmp3lame`
 
-You can download static builds of ffmpeg from [here](http://johnvansickle.com/ffmpeg/)
+You can download static builds of ffmpeg from [here](http://johnvansickle.com/ffmpeg/).
+
+If you want to use videoshow in Heroku, you could use the [ffmpeg2](https://github.com/h2non/heroku-buildpack-ffmpeg2) buildpack
 
 ## Install
 ```bash
