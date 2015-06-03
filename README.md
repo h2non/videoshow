@@ -2,21 +2,21 @@
 
 <img src="https://github.com/h2non/videoshow/blob/master/test/fixtures/norris.gif" width="180" align="right" />
 
-Simple utility for **node/io.js** to **create straightforward video slideshows based on images** using [ffmpeg](http://ffmpeg.org)
-
-You can easily **create videos** with optional **audio**, **subtitles** and **fade in/out transitions**.
+Simple utility for **node/io.js** to **create straightforward video slideshows based on images** using [ffmpeg](http://ffmpeg.org), with additional features such as **audio**, **subtitles** and **fade in/out transitions** between slides.
 
 To getting started you can take a look to the [examples](https://github.com/h2non/videoshow/tree/master/examples), [programmatic API](#api) and [command-line](#command-line-interface) interface
 
-videoshow was used in production rendering thousands of videos.
-[Here](https://www.youtube.com/watch?v=ZU84JxWGRhk) you can see a real video created using videoshow.
+videoshow is used in production rendering thousands of videos per month. [Here](https://www.youtube.com/watch?v=ZU84JxWGRhk) you can see a real example.
 
 ## Requirements
 
 - **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libass --enable-libmp3lame`
 
-## Install
+You can download static builds of ffmpeg from [here](http://johnvansickle.com/ffmpeg/).
 
+If you want to use videoshow in Heroku, you could use the [ffmpeg2](https://github.com/h2non/heroku-buildpack-ffmpeg2) buildpack
+
+## Install
 ```bash
 npm install videoshow
 ```

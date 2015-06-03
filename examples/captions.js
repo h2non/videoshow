@@ -6,7 +6,7 @@ var options = {
   loop: 5,
   captionDelay: 350,
   transition: true,
-  useSubRipSubtitles: true,
+  useSubRipSubtitles: false, // Use ASS/SSA subtitles instead 
   subtitleStyle: {
     Fontname: 'Verdana',
     Fontsize: '26',
