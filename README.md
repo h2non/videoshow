@@ -16,6 +16,10 @@ You can download static builds of ffmpeg from [here](http://johnvansickle.com/ff
 
 If you want to use videoshow in Heroku, you could use the [ffmpeg2](https://github.com/h2non/heroku-buildpack-ffmpeg2) buildpack
 
+### Image format
+
+It's highly recommended to use only JPEG images, since PNG or other formats may generate some errors in ffmpeg.
+
 ## Install
 ```bash
 npm install videoshow
