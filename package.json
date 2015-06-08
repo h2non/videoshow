@@ -39,7 +39,7 @@
   ],
   "dependencies": {
     "ass-stringify": "^0.1.1",
-    "fluent-ffmpeg": "^2.0.0-rc3",
+    "fluent-ffmpeg": "^2.0.0",
     "fw": "^0.1.2",
     "lil-uuid": "^0.1.0",
     "lodash.merge": "^3.0.0",
