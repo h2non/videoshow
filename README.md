@@ -18,7 +18,7 @@ If you want to use videoshow in Heroku, you could use the [ffmpeg2](https://gith
 
 ### Image format
 
-It's highly recommended to use only JPEG images, since PNG or other formats may generate some errors in ffmpeg.
+It's recommended to use JPEG images, since PNG or other formats may generate some unexpected errors in ffmpeg.
 
 ## Install
 ```bash
@@ -151,7 +151,7 @@ Return: `Videoshow`
 Videoshow constructor. You should pass an `array<string>` or `array<object>` or `array<ReadableStream>` with the desired images,
 and optionally passing the video render `options` object per each image.
 
-Image formats supported are: `jpg`, `png`, `gif`, `bmp`, however it's highly recommended to use `jpg`
+Image formats supported are: `jpg`, `png`, `gif` or `bmp`.
 
 ```js
 videoshow([ 'image1.jpg', 'image2.jpg', 'image3.jpg'])
