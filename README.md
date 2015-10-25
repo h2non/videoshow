@@ -66,7 +66,7 @@ videoshow(images, videoOptions)
   })
 ```
 
-The images should be squared before use.
+The images should all have the same dimensions.
 Take a look to the [programmatic API](#api) for more details
 
 ## Command-line interface
