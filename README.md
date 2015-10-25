@@ -66,6 +66,7 @@ videoshow(images, videoOptions)
   })
 ```
 
+The images should be squared before use.
 Take a look to the [programmatic API](#api) for more details
 
 ## Command-line interface
