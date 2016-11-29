@@ -1,6 +1,6 @@
 {
   "name": "videoshow",
-  "version": "0.2.0",
+  "version": "0.1.9",
   "description": "Simple command-line and programmatic interface to create videos slideshows from images using ffmpeg",
   "repository": "h2non/videoshow",
   "author": "Tomas Aparicio",
@@ -39,7 +39,7 @@
   ],
   "dependencies": {
     "ass-stringify": "^0.1.1",
-    "fluent-ffmpeg": "^2.1.0",
+    "fluent-ffmpeg": "^2.0.0",
     "fw": "^0.1.2",
     "lil-uuid": "^0.1.0",
     "lodash.merge": "^3.0.0",
