@@ -54,7 +54,8 @@ var videoOptions = {
   size: '640x?',
   audioBitrate: '128k',
   audioChannels: 2,
-  format: 'mp4'
+  format: 'mp4',
+  pixelFormat: 'yuv420p'
 }
 
 videoshow(images, videoOptions)
