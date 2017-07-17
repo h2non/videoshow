@@ -155,7 +155,7 @@ Return: `Videoshow`
 Videoshow constructor. You should pass an `array<string>` or `array<object>` or `array<ReadableStream>` with the desired images,
 and optionally passing the video render `options` object per each image.
 
-Image formats supported are: `jpg`, `png`, `gif` or `bmp`.
+Image formats supported are: `jpg`, `png` or `bmp`.
 
 ```js
 videoshow([ 'image1.jpg', 'image2.jpg', 'image3.jpg'])
