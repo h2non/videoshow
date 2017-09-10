@@ -22,7 +22,8 @@ You can download static builds of ffmpeg from [here](http://johnvansickle.com/ff
 
 If you want to use videoshow in Heroku, you could use the [ffmpeg2](https://github.com/h2non/heroku-buildpack-ffmpeg2) buildpack
 
-## Install
+## Installation
+
 ```bash
 npm install videoshow
 ```
@@ -33,6 +34,12 @@ npm install -g videoshow
 ```
 
 ## Usage
+
+**NOTE**: images must all have the same dimensions.
+
+Below you have an example script generating a video based on images and audio.
+
+Take a look to the [programmatic API](#api) and [examples](examples/) for more usage details.
 
 ```js
 var videoshow = require('videoshow')
@@ -72,9 +79,6 @@ videoshow(images, videoOptions)
     console.error('Video created in:', output)
   })
 ```
-
-The images should all have the same dimensions.
-Take a look to the [programmatic API](#api) for more details
 
 ## Command-line interface
 
