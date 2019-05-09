@@ -21,7 +21,7 @@ var images = [
 videoshow(images)
   .subtitles(subtitles)
   .audio(audio)
-  .logo(logo)
+  .logo(logo, logoParams)
   .save('video.mp4')
   .on('start', function (command) {
     console.log('ffmpeg process started:', command)
