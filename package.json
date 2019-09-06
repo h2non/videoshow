@@ -42,12 +42,12 @@
     "fluent-ffmpeg": "^2.0.0",
     "fw": "^0.1.2",
     "lil-uuid": "^0.1.0",
-    "lodash.merge": "^3.0.0",
+    "lodash.merge": "^4.6.2",
     "yargs": "^3.5.4"
   },
   "devDependencies": {
     "chai": "^1.10.0",
-    "mocha": "^2.0.1",
+    "mocha": "^6.2.0",
     "rimraf": "^2.2.8"
   }
 }
