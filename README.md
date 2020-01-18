@@ -153,7 +153,7 @@ Example `config.json` file:
 
 ## API
 
-### videoshow(images, [ options ])
+### `videoshow(images, [ options ])`
 Return: `Videoshow`
 
 Videoshow constructor. You should pass an `array<string>` or `array<object>` or `array<ReadableStream>` with the desired images,
@@ -228,12 +228,12 @@ Options details:
 - **captionEnd** `number` - Miliseconds to remove the caption. Default to `loop - 1000`
 - **logo** `string` - Path to logo image. See `logo()` method
 
-#### videoshow#image(image)
+#### `videoshow#image(image)`
 
 Push an image to the video. You can pass an `string` as path to the image,
 or a plain `object` with [image options](#supported-image-options)
 
-#### videoshow#audio(path [, params ])
+#### `videoshow#audio(path [, params ])`
 
 Define the audio file path to use.
 It supports multiple formats and codecs such as `acc`, `mp3` or `ogg`
@@ -243,7 +243,7 @@ It supports multiple formats and codecs such as `acc`, `mp3` or `ogg`
 - **delay** `number` - Delay audio start in seconds. Default to `0` seconds
 - **fade** `boolean` - Enable audio fade in/out effect. Default `true`
 
-#### videoshow#logo(path [, params ])
+#### `videoshow#logo(path [, params ])`
 
 Add a custom image as logo in the left-upper corner by default. You can customize the position by `x/y` axis.
 It must be a `png` or `jpeg` image
@@ -255,14 +255,14 @@ It must be a `png` or `jpeg` image
 - **xAxis** `number` - Logo `x` axis position. Default `10`
 - **yAxis** `number` - Logo `y` axis position. Default `10`
 
-#### videoshow#subtitles(path)
+#### `videoshow#subtitles(path)`
 
 Define the [SubRip subtitles][subrip] or [SubStation Alpha](http://en.wikipedia.org/wiki/SubStation_Alpha) (SSA/ASS)
 file path to load. It should be a `.str` or `.ass` file respectively
 
 See [fixtures](https://github.com/h2non/videoshow/blob/master/test/fixtures/subtitles.srt) for examples
 
-#### videoshow#save(path)
+#### `videoshow#save(path)`
 Return: `EventEmitter` Alias: `render`
 
 Render and write in disk the resultant video in the given path
@@ -277,56 +277,56 @@ Supported events for subscription:
 
 For more information, see the [ffmpeg docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#setting-event-handlers)
 
-#### videoshow#input(input)
+#### `videoshow#input(input)`
 
 Add input file to video. By default you don't need to call this method
 
-#### videoshow#filter(filter)
+#### `videoshow#filter(filter)`
 
 Add a custom video filter to the video. See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#videofiltersfilter-add-custom-video-filters)
 
-#### videoshow#complexFilter(filter)
+#### `videoshow#complexFilter(filter)`
 
 Add a custom complex filter to the video. See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#complexfilterfilters-map-set-complex-filtergraph)
 
-#### videoshow#loop(seconds)
+#### `videoshow#loop(seconds)`
 
 Default image loop time in seconds. Default to `5`
 
-#### videoshow#size(resolution)
+#### `videoshow#size(resolution)`
 
 Video size resolution. Default to `640x?`.
 See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#sizesize-set-output-frame-size)
 
-#### videoshow#aspect(aspect)
+#### `videoshow#aspect(aspect)`
 
 Video aspect ration. Default autocalculated from video `size` param.
 See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#aspectaspect-set-output-frame-aspect-ratio)
 
-#### videoshow#options(options)
+#### `videoshow#options(options)`
 Alias: `flags`
 
 Add a set of video output options as command-line flag.
 `options` argument should be an array.
 See the [docs](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#outputoptionsoption-add-custom-output-options)
 
-#### videoshow#option(argument)
+#### `videoshow#option(argument)`
 Alias: `flag`
 
 Add a custom output option as command-line flag to pass to `ffmpeg`
 
-#### videoshow#options(arguments)
+#### `videoshow#options(arguments)`
 Alias: `flags`
 
 Add multiple output options as command-line flags to pass to `ffmpeg`.
 The argument must be an `array`
 
-### videoshow.VERSION
+### `videoshow.VERSION`
 Type: `string`
 
 Current package semantic version
 
-### videoshow.ffmpeg
+### `videoshow.ffmpeg`
 Type: `function`
 
 [fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg) API constructor
