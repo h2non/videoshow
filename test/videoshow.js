@@ -31,6 +31,20 @@ suite('videoshow', function () {
       })
   })
 
+  test('create video with images and test imageProcessedCounter', function (done) {
+    var imageProcessedCounter = 0
+    videoshow(images)
+      .save(TMP + '/test.mp4')
+      .on('error', done)
+      .on('imagePreprocessed', function (data)  {
+        imageProcessedCounter += 1
+      })
+      .on('end', function (output) {
+        expect(imageProcessedCounter).to.equal(5)
+        done()
+      })
+  })
+
   test('create video with audio', function (done) {
     videoshow(images)
       .audio(__dirname + '/fixtures/song.aac')
