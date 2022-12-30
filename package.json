@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "chai": "^1.10.0",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "rimraf": "^2.2.8"
   }
 }
