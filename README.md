@@ -1,4 +1,4 @@
-# videoshow [![Build Status](https://api.travis-ci.org/h2non/videoshow.svg?branch=master)][travis] [![Code Climate](https://codeclimate.com/github/h2non/videoshow/badges/gpa.svg)](https://codeclimate.com/github/h2non/videoshow) [![NPM](https://img.shields.io/npm/v/videoshow.svg)][npm]
+# videoshow [![Code Climate](https://codeclimate.com/github/h2non/videoshow/badges/gpa.svg)](https://codeclimate.com/github/h2non/videoshow) [![NPM](https://img.shields.io/npm/v/videoshow.svg)][npm]
 
 <img src="https://github.com/h2non/videoshow/blob/master/test/fixtures/norris.gif" width="180" align="right" />
 
