@@ -76,7 +76,7 @@ videoshow(images, videoOptions)
     console.error('ffmpeg stderr:', stderr)
   })
   .on('end', function (output) {
-    console.error('Video created in:', output)
+    console.log('Video created in:', output)
   })
 ```
 
